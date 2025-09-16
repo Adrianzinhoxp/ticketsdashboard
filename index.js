@@ -1537,15 +1537,3 @@ function getPriorityFromType(type) {
   return priorities[type] || "Média"
 }
 
-
-// Login do bot com tratamento de erro
-console.log("🔐 Tentando fazer login...")
-client.login(CONFIG.TOKEN).catch((error) => {
-  console.error("❌ ERRO AO FAZER LOGIN:")
-  console.error("Erro:", error.message)
-  console.error("📋 VERIFICAÇÕES:")
-  console.error("1. Token está correto?")
-  console.error("2. Bot está ativo no Discord Developer Portal?")
-  console.error("3. Variável DISCORD_TOKEN está configurada no Railway?")
-  process.exit(1)
-})
